@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | LuxeDrive</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .inner-page-header {
+            padding: 150px 5% 50px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(5,8,20,0.8), var(--bg-color));
+        }
+        .about-content {
+            padding: 50px 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .about-content h3 {
+            color: var(--text-primary);
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="logo"><h2><a href="index.html" style="color:white; text-decoration:none;">Luxe<span>Drive</span></a></h2></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#fleet">Our Fleet</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="btn-primary" onclick="window.location.href='index.html#fleet'">Book Now</button>
+        <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="index.html" class="mobile-link">Home</a></li>
+            <li><a href="index.html#fleet" class="mobile-link">Our Fleet</a></li>
+            <li><a href="about.html" class="mobile-link">About</a></li>
+            <li><a href="contact.html" class="mobile-link">Contact</a></li>
+            <li><button class="btn-primary mobile-link" onclick="window.location.href='index.html#fleet'">Book Now</button></li>
+        </ul>
+    </div>
+
+    <div class="inner-page-header fade-in">
+        <h1>About <span>LuxeDrive</span></h1>
+        <p>Your premium journey begins with us.</p>
+    </div>
+
+    <div class="about-content fade-in scroll-element">
+        <p>LuxeDrive was founded in 2026 with a single, clear vision: to completely redefine the car rental experience. We believe that your journey should be just as magnificent as your destination. With the most meticulously curated fleet of premium luxury sedans, rugged yet opulent SUVs, and heart-racing sports cars, LuxeDrive exists to put you behind the wheel of your absolute dream car.</p>
+        
+        <div class="about-grid">
+            <div class="glass-card" style="padding: 2rem; text-align:center;">
+                <i class="fas fa-gem" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h3>Unmatched Quality</h3>
+                <p>Every vehicle in our fleet is perfectly maintained to guarantee an immaculate driving experience every single time.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem; text-align:center;">
+                <i class="fas fa-headset" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h3>24/7 Concierge</h3>
+                <p>Our dedicated luxury concierge team is available around the clock to support your journey anywhere in the world.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <h2>Luxe<span>Drive</span></h2>
+            </div>
+            <p>&copy; 2026 LuxeDrive Premium Car Rental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeDrive | Premium Car Rental</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="logo"><h2><a href="index.html" style="color:white; text-decoration:none;">Luxe<span>Drive</span></a></h2></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#fleet">Our Fleet</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="btn-primary" onclick="window.location.href='index.html#fleet'">Book Now</button>
+        <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="index.html" class="mobile-link">Home</a></li>
+            <li><a href="index.html#fleet" class="mobile-link">Our Fleet</a></li>
+            <li><a href="about.html" class="mobile-link">About</a></li>
+            <li><a href="contact.html" class="mobile-link">Contact</a></li>
+            <li><button class="btn-primary mobile-link" onclick="window.location.href='index.html#fleet'">Book Now</button></li>
+        </ul>
+    </div>
+    <header class="hero" id="home">
+        <div class="hero-bg" style="background-image: url('images/hero_bg_1774338259567.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in">
+            <h1>Drive Your <span>Dream</span></h1>
+            <p>Experience the thrill of driving luxury and sports cars.</p>
+            <div class="booking-widget slide-up">
+                <form id="hero-booking-form" class="glass-form">
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Pick-up Location</label>
+                        <select required id="pickup-location">
+                            <option value="">Select Location</option>
+                            <option value="airport">International Airport</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="far fa-calendar-alt"></i> Pick-up</label>
+                        <input type="date" required id="pickup-date">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="far fa-calendar-alt"></i> Drop-off</label>
+                        <input type="date" required id="dropoff-date">
+                    </div>
+                    <button type="submit" class="btn-gradient">Find Vehicles</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <section class="fleet-section" id="fleet">
+        <div class="section-title fade-in scroll-element">
+            <h2>Our Premium <span>Fleet</span></h2>
+        </div>
+        <div class="filters fade-in scroll-element">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+            <button class="filter-btn" data-filter="suv">SUVs</button>
+            <button class="filter-btn" data-filter="sedan">Sedans</button>
+        </div>
+        <div class="car-grid" id="car-grid">
+            <div class="car-card glass-card scroll-element" data-type="sports" data-price="250">
+                <div class="car-image"><img src="images/sports_car_1774338280634.png" alt="Sports Car"><div class="car-badge">Sports</div></div>
+                <div class="car-details">
+                    <h3>Aero Sport Z</h3>
+                    <div class="car-specs"><span><i class="fas fa-tachometer-alt"></i> 320 km/h</span><span><i class="fas fa-users"></i> 2 Seats</span></div>
+                    <div class="car-price"><span class="price">₹250</span> / day</div>
+                    <button class="btn-primary w-100 book-now-btn" data-car="Aero Sport Z" data-price="250">Book Now</button>
+                </div>
+            </div>
+            <div class="car-card glass-card scroll-element" data-type="suv" data-price="180">
+                <div class="car-image"><img src="images/luxury_suv_1774338299934.png" alt="Luxury SUV"><div class="car-badge">SUV</div></div>
+                <div class="car-details">
+                    <h3>Titan Prestige SUV</h3>
+                    <div class="car-specs"><span><i class="fas fa-tachometer-alt"></i> 240 km/h</span><span><i class="fas fa-users"></i> 7 Seats</span></div>
+                    <div class="car-price"><span class="price">₹180</span> / day</div>
+                    <button class="btn-primary w-100 book-now-btn" data-car="Titan Prestige SUV" data-price="180">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <h2>Luxe<span>Drive</span></h2>
+            </div>
+            <p>&copy; 2026 LuxeDrive Premium Car Rental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="booking-modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <h2>Book <span id="modal-car-name">Car</span></h2>
+            <form id="modal-booking-form">
+                <div class="form-group"><label>Full Name</label><input type="text" required id="modal-name" placeholder="Enter your name"></div>
+                <div class="form-group"><label>Mobile Number</label><input type="tel" required id="modal-mobile" placeholder="Enter your mobile number"></div>
+                <div class="form-group"><label>Pick-up Date</label><input type="date" required id="modal-pickup-date"></div>
+                <div class="form-group"><label>Drop-off Date</label><input type="date" required id="modal-dropoff-date"></div>
+                <div class="price-calculator">
+                    <p>Price per day: ₹<span id="modal-price-per-day">0</span></p>
+                    <p>Total Days: <span id="modal-total-days">0</span></p>
+                    <hr><h3>Total Cost: ₹<span id="modal-total-cost">0</span></h3>
+                </div>
+                <button type="submit" class="btn-gradient w-100">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+    <div id="toast" class="toast">Booking Confirmed successfully!</div>
+    <script src="script.js"></script>
+</body>
+</html>
