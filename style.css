@@ -185,6 +185,32 @@ footer p {
     margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;
 }
 
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 30px;
+    left: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 45px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    color: #FFF;
+}
+
 @media (max-width: 768px) {
     .nav-links, .navbar .btn-primary { display: none; }
     .menu-toggle { display: block; }

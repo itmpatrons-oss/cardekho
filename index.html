@@ -104,7 +104,9 @@
             <h2>Book <span id="modal-car-name">Car</span></h2>
             <form id="modal-booking-form">
                 <div class="form-group"><label>Full Name</label><input type="text" required id="modal-name" placeholder="Enter your name"></div>
+                <div class="form-group"><label>Email Address</label><input type="email" required id="modal-email" placeholder="Enter your email address"></div>
                 <div class="form-group"><label>Mobile Number</label><input type="tel" required id="modal-mobile" placeholder="Enter your mobile number"></div>
+                <div class="form-group"><label>Message / Special Request</label><textarea id="modal-message" placeholder="Any special requests or details?" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 0.8rem 1rem; color: var(--text-primary); outline: none; font-family: 'Outfit', sans-serif; resize: vertical; min-height: 80px;"></textarea></div>
                 <div class="form-group"><label>Pick-up Date</label><input type="date" required id="modal-pickup-date"></div>
                 <div class="form-group"><label>Drop-off Date</label><input type="date" required id="modal-dropoff-date"></div>
                 <div class="price-calculator">
@@ -117,6 +119,12 @@
         </div>
     </div>
     <div id="toast" class="toast">Booking Confirmed successfully!</div>
+    
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/1800555LUXE" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
     <script src="script.js"></script>
 </body>
 </html>

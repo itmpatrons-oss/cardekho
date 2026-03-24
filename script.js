@@ -70,6 +70,8 @@ const pickupInput = document.getElementById('modal-pickup-date');
 const dropoffInput = document.getElementById('modal-dropoff-date');
 const nameInput = document.getElementById('modal-name');
 const mobileInput = document.getElementById('modal-mobile');
+const emailInput = document.getElementById('modal-email');
+const messageInput = document.getElementById('modal-message');
 
 let currentCarPrice = 0;
 
@@ -82,6 +84,8 @@ bookNowBtns.forEach(btn => {
         pickupInput.value = ''; dropoffInput.value = '';
         if(nameInput) nameInput.value = '';
         if(mobileInput) mobileInput.value = '';
+        if(emailInput) emailInput.value = '';
+        if(messageInput) messageInput.value = '';
         modalTotalDays.innerText = '0'; modalTotalCost.innerText = '0';
         modal.style.display = 'flex';
         setTimeout(() => modal.classList.add('show'), 10);
